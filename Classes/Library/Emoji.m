@@ -555,7 +555,7 @@ static int compare2(const char *a, const char **b)
     p = (char *)data;
     mode = 0;
     for (i = 0; i < length; i++) {
-        if (mode == 0 && p[0] == ':') {
+        if (mode == 0 && p[0] == ':' && i+1 < length && p[1] != '/') {
             offset = i;
             o = ++p;
             mode = 1;
