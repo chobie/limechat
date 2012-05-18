@@ -9,7 +9,7 @@
 #import "MarkedScroller.h"
 #import "ViewTheme.h"
 #import "WebViewAutoScroll.h"
-
+#import "Emoji.h"
 
 @class IRCWorld;
 @class IRCClient;
@@ -51,6 +51,7 @@
     NSString* html;
     BOOL scrollBottom;
     int scrollTop;
+    Emoji *emoji;
 }
 
 @property (nonatomic, readonly) LogView* view;
@@ -67,6 +68,7 @@
 @property (nonatomic, retain) NSColor* initialBackgroundColor;
 @property (nonatomic, assign) int maxLines;
 @property (nonatomic, readonly) BOOL viewingBottom;
+@property (nonatomic, retain) Emoji* emoji;
 
 - (void)setUp;
 - (void)notifyDidBecomeVisible;

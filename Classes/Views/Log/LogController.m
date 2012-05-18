@@ -12,7 +12,6 @@
 #import "ImageURLParser.h"
 #import "ImageDownloadManager.h"
 
-
 #define BOTTOM_EPSILON          20
 #define INLINE_IMAGE_MAX_SIZE   (1024 * 1024)
 
@@ -47,6 +46,7 @@
 @synthesize theme;
 @synthesize maxLines;
 @synthesize console;
+@synthesize emoji;
 @synthesize initialBackgroundColor;
 
 - (id)init
@@ -57,6 +57,7 @@
         maxLines = 300;
         lines = [NSMutableArray new];
         highlightedLineNumbers = [NSMutableArray new];
+        emoji = [[Emoji alloc] init];
     }
     return self;
 }
@@ -497,6 +498,8 @@
         [lines addObject:line];
         return key;
     }
+    
+    body = [emoji render:body];
     
     NSMutableString* s = [NSMutableString string];
     if (line.time) [s appendFormat:@"<span class=\"time\">%@</span>", logEscape(line.time)];

@@ -6,7 +6,6 @@
 #import "GTMNSString+HTML.h"
 #import "UnicodeHelper.h"
 
-
 #define URL_ATTR                (1 << 31)
 #define ADDRESS_ATTR            (1 << 30)
 #define CHANNEL_NAME_ATTR       (1 << 29)

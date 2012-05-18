@@ -330,6 +330,8 @@
 		78E5723D0C1C30BA00BDF7EC /* CoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 780253C20C09525900C170D4 /* CoreServices.framework */; };
 		78FA9F651085AA1400001F13 /* Sparkle.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 78FA9F641085AA1400001F13 /* Sparkle.framework */; };
 		78FA9F6E1085AA1A00001F13 /* Sparkle.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 78FA9F641085AA1400001F13 /* Sparkle.framework */; };
+		D919A1721565FA5700E46162 /* Emoji.m in Sources */ = {isa = PBXBuildFile; fileRef = D919A1711565FA5700E46162 /* Emoji.m */; };
+		D919A558156645C800E46162 /* emoji in Resources */ = {isa = PBXBuildFile; fileRef = D919A557156645C800E46162 /* emoji */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -663,6 +665,9 @@
 		78C8911B1173806A002EED61 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = Others/Info.plist; sourceTree = "<group>"; };
 		78E570D00C1C306500BDF7EC /* LimeChat.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LimeChat.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		78FA9F641085AA1400001F13 /* Sparkle.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Sparkle.framework; path = Frameworks/Sparkle.framework; sourceTree = "<group>"; };
+		D919A1701565FA5700E46162 /* Emoji.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Emoji.h; sourceTree = "<group>"; };
+		D919A1711565FA5700E46162 /* Emoji.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Emoji.m; sourceTree = "<group>"; };
+		D919A557156645C800E46162 /* emoji */ = {isa = PBXFileReference; lastKnownFileType = folder; name = emoji; path = Resources/emoji; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -734,6 +739,7 @@
 		29B97317FDCFA39411CA2CEA /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				D919A557156645C800E46162 /* emoji */,
 				784BBE8F1085BC950080898B /* images */,
 				78C8911B1173806A002EED61 /* Info.plist */,
 				782DA90212DB5A3800C07861 /* Info-AppStore.plist */,
@@ -1036,6 +1042,8 @@
 				78A8C14411737F660044E7A1 /* TCPServer.m */,
 				78A8C14511737F660044E7A1 /* Timer.h */,
 				78A8C14611737F660044E7A1 /* Timer.m */,
+				D919A1701565FA5700E46162 /* Emoji.h */,
+				D919A1711565FA5700E46162 /* Emoji.m */,
 			);
 			name = Library;
 			path = Classes/Library;
@@ -1319,6 +1327,7 @@
 				78A7B5DA11745616006B324A /* InviteSheet.xib in Resources */,
 				789ED4B31193FA9E00CFC0B2 /* IgnoreItemSheet.xib in Resources */,
 				78B9B86313F1E6EF005E1BC8 /* Growl Registration Ticket.growlRegDict in Resources */,
+				D919A558156645C800E46162 /* emoji in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1592,6 +1601,7 @@
 				789ED4841193F9EB00CFC0B2 /* IgnoreItemSheet.m in Sources */,
 				780844D2134CD34B003BB84C /* ImageDownloadManager.m in Sources */,
 				780844F6134CD45E003BB84C /* ImageSizeCheckClient.m in Sources */,
+				D919A1721565FA5700E46162 /* Emoji.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
