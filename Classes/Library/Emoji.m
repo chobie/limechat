@@ -565,6 +565,7 @@ static int compare2(const char *a, const char **b)
             mode = 0;
         } else if (mode == 1 && p[0] == ':') {
             mode = 0;
+            memset(symbol,'\0',25);
             memcpy(symbol, o, (i - offset));
             symbol[(i-offset+1)] = '\0';
             
