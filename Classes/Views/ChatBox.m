@@ -19,6 +19,11 @@
     return [[[[self subviews] objectAtIndex:0] subviews] objectAtIndex:1];
 }
 
+- (NSButton*)emojiButton
+{
+    return [[[[self subviews] objectAtIndex:0] subviews] objectAtIndex:2];
+}
+
 - (void)setInputTextFont:(NSFont*)font
 {
     NSTextField* text = [self inputText];
@@ -50,6 +55,7 @@
         NSTextField* text = [self inputText];
         NSRect boxFrame = [box frame];
         NSRect textFrame = [text frame];
+        NSButton* button = [self emojiButton];
         
         boxFrame.origin.x = 0;
         boxFrame.origin.y = textFrame.size.height + CHATBOX_SPACE;
@@ -58,7 +64,8 @@
         [box setFrame:boxFrame];
         
         textFrame.origin = NSMakePoint(0, 0);
-        textFrame.size.width = f.size.width;
+        textFrame.size.width = f.size.width - 45;
+        [button setFrame:NSMakeRect(textFrame.size.width+3, 2.0f, 40, textFrame.size.height+0.2f)];
         [text setFrame:textFrame];
     }
     

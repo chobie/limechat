@@ -330,6 +330,11 @@
 		78E5723D0C1C30BA00BDF7EC /* CoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 780253C20C09525900C170D4 /* CoreServices.framework */; };
 		78FA9F651085AA1400001F13 /* Sparkle.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 78FA9F641085AA1400001F13 /* Sparkle.framework */; };
 		78FA9F6E1085AA1A00001F13 /* Sparkle.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 78FA9F641085AA1400001F13 /* Sparkle.framework */; };
+		D240A5BE15673505005D2E6E /* emoji.png in Resources */ = {isa = PBXBuildFile; fileRef = D240A5BD15673505005D2E6E /* emoji.png */; };
+		D240A5C1156739E3005D2E6E /* Emoji.xib in Resources */ = {isa = PBXBuildFile; fileRef = D240A5C0156739E3005D2E6E /* Emoji.xib */; };
+		D240A5F915680BE6005D2E6E /* Quartz.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D240A5F815680BE6005D2E6E /* Quartz.framework */; };
+		D240A5FD15680CBA005D2E6E /* EmojiElement.m in Sources */ = {isa = PBXBuildFile; fileRef = D240A5FC15680CBA005D2E6E /* EmojiElement.m */; };
+		D240A6111568CEE6005D2E6E /* EmojiDialog.m in Sources */ = {isa = PBXBuildFile; fileRef = D240A6101568CEE4005D2E6E /* EmojiDialog.m */; };
 		D919A1721565FA5700E46162 /* Emoji.m in Sources */ = {isa = PBXBuildFile; fileRef = D919A1711565FA5700E46162 /* Emoji.m */; };
 		D919A558156645C800E46162 /* emoji in Resources */ = {isa = PBXBuildFile; fileRef = D919A557156645C800E46162 /* emoji */; };
 /* End PBXBuildFile section */
@@ -665,6 +670,13 @@
 		78C8911B1173806A002EED61 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = Others/Info.plist; sourceTree = "<group>"; };
 		78E570D00C1C306500BDF7EC /* LimeChat.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LimeChat.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		78FA9F641085AA1400001F13 /* Sparkle.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Sparkle.framework; path = Frameworks/Sparkle.framework; sourceTree = "<group>"; };
+		D240A5BD15673505005D2E6E /* emoji.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = emoji.png; sourceTree = "<group>"; };
+		D240A5C0156739E3005D2E6E /* Emoji.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = Emoji.xib; sourceTree = "<group>"; };
+		D240A5F815680BE6005D2E6E /* Quartz.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Quartz.framework; path = System/Library/Frameworks/Quartz.framework; sourceTree = SDKROOT; };
+		D240A5FB15680CBA005D2E6E /* EmojiElement.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EmojiElement.h; sourceTree = "<group>"; };
+		D240A5FC15680CBA005D2E6E /* EmojiElement.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EmojiElement.m; sourceTree = "<group>"; };
+		D240A60F1568CEE3005D2E6E /* EmojiDialog.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EmojiDialog.h; sourceTree = "<group>"; };
+		D240A6101568CEE4005D2E6E /* EmojiDialog.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EmojiDialog.m; sourceTree = "<group>"; };
 		D919A1701565FA5700E46162 /* Emoji.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Emoji.h; sourceTree = "<group>"; };
 		D919A1711565FA5700E46162 /* Emoji.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Emoji.m; sourceTree = "<group>"; };
 		D919A557156645C800E46162 /* emoji */ = {isa = PBXFileReference; lastKnownFileType = folder; name = emoji; path = Resources/emoji; sourceTree = "<group>"; };
@@ -688,6 +700,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D240A5F915680BE6005D2E6E /* Quartz.framework in Frameworks */,
 				78E572390C1C30BA00BDF7EC /* Cocoa.framework in Frameworks */,
 				78E5723B0C1C30BA00BDF7EC /* WebKit.framework in Frameworks */,
 				78E5723C0C1C30BA00BDF7EC /* Carbon.framework in Frameworks */,
@@ -727,6 +740,7 @@
 		29B97314FDCFA39411CA2CEA /* LimeChat */ = {
 			isa = PBXGroup;
 			children = (
+				D240A5F815680BE6005D2E6E /* Quartz.framework */,
 				080E96DDFE201D6D7F000001 /* Classes */,
 				783E6AD51173802100261552 /* Others */,
 				29B97317FDCFA39411CA2CEA /* Resources */,
@@ -762,6 +776,7 @@
 				78C2D608115A428C00705817 /* dsa_pub.pem */,
 				78B9B86213F1E6EF005E1BC8 /* Growl Registration Ticket.growlRegDict */,
 				78287EA90D742DAA008D5656 /* Themes */,
+				D240A5C0156739E3005D2E6E /* Emoji.xib */,
 			);
 			name = Resources;
 			sourceTree = "<group>";
@@ -838,6 +853,7 @@
 		784BBE8F1085BC950080898B /* images */ = {
 			isa = PBXGroup;
 			children = (
+				D240A5BD15673505005D2E6E /* emoji.png */,
 				78B2DF1F0D0417160092EBDA /* application.icns */,
 				784BBE901085BC950080898B /* bluestar.tiff */,
 				784BBE931085BC950080898B /* redstar.tiff */,
@@ -897,6 +913,8 @@
 				78A8C0E811737F660044E7A1 /* WelcomeDialog.m */,
 				78A8C0E311737F660044E7A1 /* SheetBase.h */,
 				78A8C0E411737F660044E7A1 /* SheetBase.m */,
+				D240A60F1568CEE3005D2E6E /* EmojiDialog.h */,
+				D240A6101568CEE4005D2E6E /* EmojiDialog.m */,
 			);
 			name = Dialogs;
 			path = Classes/Dialogs;
@@ -1044,6 +1062,8 @@
 				78A8C14611737F660044E7A1 /* Timer.m */,
 				D919A1701565FA5700E46162 /* Emoji.h */,
 				D919A1711565FA5700E46162 /* Emoji.m */,
+				D240A5FB15680CBA005D2E6E /* EmojiElement.h */,
+				D240A5FC15680CBA005D2E6E /* EmojiElement.m */,
 			);
 			name = Library;
 			path = Classes/Library;
@@ -1328,6 +1348,8 @@
 				789ED4B31193FA9E00CFC0B2 /* IgnoreItemSheet.xib in Resources */,
 				78B9B86313F1E6EF005E1BC8 /* Growl Registration Ticket.growlRegDict in Resources */,
 				D919A558156645C800E46162 /* emoji in Resources */,
+				D240A5BE15673505005D2E6E /* emoji.png in Resources */,
+				D240A5C1156739E3005D2E6E /* Emoji.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1602,6 +1624,8 @@
 				780844D2134CD34B003BB84C /* ImageDownloadManager.m in Sources */,
 				780844F6134CD45E003BB84C /* ImageSizeCheckClient.m in Sources */,
 				D919A1721565FA5700E46162 /* Emoji.m in Sources */,
+				D240A5FD15680CBA005D2E6E /* EmojiElement.m in Sources */,
+				D240A6111568CEE6005D2E6E /* EmojiDialog.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

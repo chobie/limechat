@@ -4,7 +4,6 @@
 #import "LimeChatApplication.h"
 #import "Preferences.h"
 
-
 enum {
     kEventHotKeyPressedSubtype = 6,
     kEventHotKeyReleasedSubtype = 9,
@@ -12,6 +11,7 @@ enum {
 
 
 @implementation LimeChatApplication
+
 
 - (id)init
 {
@@ -68,5 +68,4 @@ enum {
         [hotkey unregisterHotKey];
     }
 }
-
 @end

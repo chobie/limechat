@@ -17,6 +17,7 @@
 #import "DCCController.h"
 #import "GrowlController.h"
 #import "WelcomeDialog.h"
+#import "EmojiDialog.h"
 
 
 @interface AppController : NSObject
@@ -27,6 +28,7 @@
     IBOutlet NSBox* consoleBase;
     IBOutlet MemberListView* memberList;
     IBOutlet InputTextField* text;
+    IBOutlet NSButton *emojiButton;
     IBOutlet ChatBox* chatBox;
     IBOutlet NSScrollView* treeScrollView;
     IBOutlet NSView* leftTreeBase;
@@ -45,7 +47,7 @@
     IBOutlet NSMenu* urlMenu;
     IBOutlet NSMenu* addrMenu;
     IBOutlet NSMenu* chanMenu;
-    
+
     WelcomeDialog* welcomeDialog;
     GrowlController* growl;
     DCCController* dcc;
@@ -54,9 +56,12 @@
     ViewTheme* viewTheme;
     InputHistory* inputHistory;
     NickCompletinStatus* completionStatus;
+    EmojiDialog* emojiDialog;
     
     BOOL threeColumns;
     BOOL terminating;
 }
+@property(retain) InputTextField *text;
 
+- (IBAction)openEmoji:(id)sender;
 @end

@@ -540,6 +540,17 @@ static int compare2(const char *a, const char **b)
     return self;
 }
 
++ (NSString*)get:(int)index
+{
+    NSString *item = [NSString stringWithCString:emoji_symbols[index] encoding:NSUTF8StringEncoding];
+    return item;
+}
+
++ (int)count
+{
+    return (int)emoji_symbol_count;
+}
+
 - (NSString*) render:(NSString*)string
 {
     int i, offset, mode, length = 0;

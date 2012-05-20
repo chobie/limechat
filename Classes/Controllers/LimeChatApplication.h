@@ -2,8 +2,8 @@
 // You can redistribute it and/or modify it under the terms of the GPL version 2 (see the file GPL.txt).
 
 #import <Cocoa/Cocoa.h>
+#import <Quartz/Quartz.h>
 #import "HotKeyManager.h"
-
 
 @interface LimeChatApplication : NSApplication
 {
@@ -12,7 +12,6 @@
 
 - (void)registerHotKey:(int)keyCode modifierFlags:(NSUInteger)modFlags;
 - (void)unregisterHotKey;
-
 @end
 
 

@@ -16,7 +16,8 @@
 #import "NSStringHelper.h"
 #import "NSDictionaryHelper.h"
 #import "NSLocaleHelper.h"
-
+#import "Emoji.h"
+#import "EmojiElement.h"
 
 #define KInternetEventClass     1196773964
 #define KAEGetURL               1196773964
@@ -45,8 +46,12 @@
 
 @implementation AppController
 
+@synthesize text;
+
+
 - (void)dealloc
 {
+    [emojiDialog release];
     [welcomeDialog release];
     [growl release];
     [dcc release];
@@ -93,7 +98,7 @@
         [(LimeChatApplication*)NSApp registerHotKey:keyCode modifierFlags:modifierFlags];
     }
     
-    rootSplitter.fixedViewIndex = 1;
+    rootSplitter.fixedViewIndex = 0;
     logSplitter.fixedViewIndex = 1;
     infoSplitter.fixedViewIndex = 1;
     treeSplitter.hidden = YES;
@@ -199,10 +204,15 @@
 {
     [ViewTheme createUserDirectory];
     
+    emojiDialog = [[EmojiDialog alloc] init];
+    emojiDialog.text = self.text;
+    [emojiDialog show];
+    
     if (!world.clients.count) {
         welcomeDialog = [WelcomeDialog new];
         welcomeDialog.delegate = self;
         [welcomeDialog show];
+        
     }
     else {
         [window makeFirstResponder:text];
@@ -1158,6 +1168,12 @@ typedef enum {
     welcomeDialog = nil;
     
     [window makeKeyAndOrderFront:nil];
+}
+
+
+- (IBAction)openEmoji:(id)sender
+{
+    [emojiDialog show];
 }
 
 @end

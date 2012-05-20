@@ -10,6 +10,9 @@
 
 @interface Emoji : NSObject
 
++ (NSString*)get:(int)index;
++ (int) count;
+
 - (NSString*) render:(NSString*)string;
 
 @end
